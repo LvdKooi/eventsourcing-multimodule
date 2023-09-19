@@ -17,11 +17,13 @@ import java.time.LocalDate;
 public class FinancieleVerplichtingController {
 
     private final BepaalFinancieleVerplichtingUseCase bepaalFinancieleVerplichtingUseCase;
+
     private final DtoMapper mapper;
 
     @GetMapping("/financiele-verplichtingen")
     public FinancieleVerplichtingDTO getFinancieleVerplichting(@RequestParam String verplichtingnummer,
                                                                @RequestParam("peil-datum") @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate peilDatum) {
+
         return mapper.map(bepaalFinancieleVerplichtingUseCase.handle(BepaalFinancieleVerplichtingCommand.of(verplichtingnummer, peilDatum)));
     }
 }

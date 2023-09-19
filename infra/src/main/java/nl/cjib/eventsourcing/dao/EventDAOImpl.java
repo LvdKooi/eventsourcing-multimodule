@@ -1,4 +1,4 @@
-package nl.cjib.eventsourcing;
+package nl.cjib.eventsourcing.dao;
 
 import lombok.RequiredArgsConstructor;
 import nl.cjib.eventsourcing.entity.EventEntity;

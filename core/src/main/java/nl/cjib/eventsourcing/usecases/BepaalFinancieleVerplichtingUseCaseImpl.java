@@ -5,7 +5,7 @@ import nl.cjib.eventsourcing.domain.aggregator.aggregate.FinancieleVerplichting;
 import nl.cjib.eventsourcing.domain.event.Event;
 import nl.cjib.eventsourcing.domain.mapper.EventMapper;
 import nl.cjib.eventsourcing.exception.NotFoundException;
-import nl.cjib.eventsourcing.EventDAO;
+import nl.cjib.eventsourcing.dao.EventDAO;
 import nl.cjib.eventsourcing.command.BepaalFinancieleVerplichtingCommand;
 import nl.cjib.eventsourcing.domain.aggregator.FinancieleVerplichtingAggregator;
 import org.springframework.stereotype.Component;
