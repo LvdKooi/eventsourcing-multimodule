@@ -1,4 +1,4 @@
-package nl.cjib.eventsourcing.domain.mapper;
+package nl.cjib.eventsourcing.mapper;
 
 
 import nl.cjib.eventsourcing.domain.event.BetalingsverplichtingIngetrokken;
