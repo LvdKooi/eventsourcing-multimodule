@@ -43,11 +43,6 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>nl.cjib.eventsourcing</groupId>
             <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
