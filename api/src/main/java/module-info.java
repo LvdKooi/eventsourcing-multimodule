@@ -8,4 +8,5 @@ open module nl.cjib.eventsourcing.api {
     requires com.fasterxml.jackson.annotation;
     requires spring.boot;
     requires spring.boot.autoconfigure;
+    requires org.mapstruct;
 }
