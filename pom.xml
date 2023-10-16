@@ -19,6 +19,7 @@
         <module>infra</module>
         <module>api</module>
         <module>app</module>
+        <module>itest</module>
     </modules>
     <properties>
         <java.version>17</java.version>

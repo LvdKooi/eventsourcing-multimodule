@@ -15,7 +15,7 @@ import java.math.RoundingMode;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {EventsourcingApplication.class} )
 class FinancieleVerplichtingIntegrationTest {
 
 
