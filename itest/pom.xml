@@ -4,10 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>nl.cjib</groupId>
+        <groupId>nl.cjib.eventsourcing</groupId>
         <artifactId>eventsourcing-multimodule</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0</version>
     </parent>
+
 
     <groupId>nl.kooi</groupId>
     <artifactId>itest</artifactId>
