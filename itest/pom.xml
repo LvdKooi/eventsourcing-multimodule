@@ -9,8 +9,6 @@
         <version>0</version>
     </parent>
 
-
-    <groupId>nl.kooi</groupId>
     <artifactId>itest</artifactId>
 
     <dependencies>
