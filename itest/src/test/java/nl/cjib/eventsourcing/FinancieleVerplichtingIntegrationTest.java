@@ -2,8 +2,8 @@ package nl.cjib.eventsourcing;
 
 
 import nl.cjib.eventsourcing.dto.FinancieleVerplichtingDTO;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -21,12 +21,9 @@ class FinancieleVerplichtingIntegrationTest {
 
     @LocalServerPort
     private String port;
-    private TestRestTemplate testRestTemplate;
 
-    @BeforeEach
-    void setUp() {
-        testRestTemplate = new TestRestTemplate();
-    }
+    @Autowired
+    private TestRestTemplate testRestTemplate;
 
     @Test
     void getFinancieleVerplichting() {
