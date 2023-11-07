@@ -9,24 +9,9 @@
         <version>0</version>
     </parent>
 
-    <artifactId>app</artifactId>
+    <artifactId>itest</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>nl.cjib.eventsourcing</groupId>
-            <artifactId>api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>nl.cjib.eventsourcing</groupId>
-            <artifactId>infra</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>nl.cjib.eventsourcing</groupId>
-            <artifactId>core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -40,5 +25,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>nl.cjib.eventsourcing</groupId>
+            <artifactId>api</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>nl.cjib.eventsourcing</groupId>
+            <artifactId>app</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
 </project>

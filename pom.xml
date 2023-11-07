@@ -8,9 +8,9 @@
         <version>3.1.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>nl.cjib</groupId>
+    <groupId>nl.cjib.eventsourcing</groupId>
     <artifactId>eventsourcing-multimodule</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0</version>
     <packaging>pom</packaging>
     <name>eventsourcing</name>
     <description>Demo project for Spring Boot</description>
@@ -19,8 +19,14 @@
         <module>infra</module>
         <module>api</module>
         <module>app</module>
+        <module>itest</module>
     </modules>
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+        <org.lombok.version>1.18.30</org.lombok.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>

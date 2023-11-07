@@ -21,18 +21,11 @@ public interface EventMapper {
     FinancieleVerplichtingOpgelegd map(FinancieleVerplichtingOpgelegdEntity model);
 
     default Event map(EventEntity event) {
-        if (event instanceof BetalingsverplichtingIngetrokkenEntity bvi) {
-            return map(bvi);
-        }
-
-        if (event instanceof BetalingsverplichtingOpgelegdEntity bvo) {
-            return map(bvo);
-        }
-
-        if (event instanceof FinancieleVerplichtingOpgelegdEntity fvo) {
-            return map(fvo);
-        }
-
-        return null;
+        return switch (event) {
+            case BetalingsverplichtingIngetrokkenEntity bvi -> map(bvi);
+            case BetalingsverplichtingOpgelegdEntity bvo -> map(bvo);
+            case FinancieleVerplichtingOpgelegdEntity fvo -> map(fvo);
+            default -> null;
+        };
     }
 }

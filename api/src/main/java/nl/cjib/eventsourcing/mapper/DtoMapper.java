@@ -50,19 +50,12 @@ public interface DtoMapper {
     FinancieleVerplichtingOpgelegdDTO map(FinancieleVerplichtingOpgelegd model);
 
     default EventDTO map(Event event) {
-        if (event instanceof BetalingsverplichtingIngetrokken bvi) {
-            return map(bvi);
-        }
-
-        if (event instanceof BetalingsverplichtingOpgelegd bvo) {
-            return map(bvo);
-        }
-
-        if (event instanceof FinancieleVerplichtingOpgelegd fvo) {
-            return map(fvo);
-        }
-
-        return null;
+        return switch (event) {
+            case BetalingsverplichtingIngetrokken bvi -> map(bvi);
+            case BetalingsverplichtingOpgelegd bvo -> map(bvo);
+            case FinancieleVerplichtingOpgelegd fvo -> map(fvo);
+            default -> null;
+        };
     }
 
 }
