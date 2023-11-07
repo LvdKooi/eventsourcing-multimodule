@@ -10,12 +10,6 @@
     </parent>
 
     <artifactId>api</artifactId>
-
-    <properties>
-        <java.version>17</java.version>
-        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
-        <org.lombok.version>1.18.28</org.lombok.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springdoc</groupId>
