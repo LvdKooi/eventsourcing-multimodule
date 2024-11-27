@@ -1,12 +1,8 @@
 package nl.cjib.eventsourcing;
 
 
-import nl.cjib.eventsourcing.dto.FinancieleVerplichtingDTO;
+import nl.cjib.eventsourcing.api.dto.FinancieleVerplichtingDTO;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatusCode;
 
 import java.math.BigDecimal;
@@ -15,15 +11,7 @@ import java.math.RoundingMode;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {EventsourcingApplication.class} )
-class FinancieleVerplichtingIntegrationTest {
-
-
-    @LocalServerPort
-    private String port;
-
-    @Autowired
-    private TestRestTemplate testRestTemplate;
+class FinancieleVerplichtingIntegrationTest extends BaseTest {
 
     @Test
     void getFinancieleVerplichting() {
